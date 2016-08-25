@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Jison Test</title>
+
+    <link href="main.css" type="text/css" rel="stylesheet" media="screen" />
+  </head>
+  <body>
+    <h1>Test Jison</h1>
+
+    <label for="grammar">Grammar: </label>
+    <div>
+      <textarea id="grammar" rows="20" cols="80">
+%%
+
+E
+    : E PLUS T
+    | T
+    ;
+
+T
+    : ZERO
+;
+      </textarea><br>
+      <input type="button" id="generate_btn" value="Generate Parser">
+    </div>
+
+    <pre id="gen_out"></pre>
+
+    <div id="nonterminals"></div>
+    <div id="productions"></div>
+    <div id="table"></div>
+
+    <hr>
+
+    <h3>Parsing</h3>
+    <div>
+      <textarea id="source" rows="8" cols="80"></textarea><br>
+      <input type="button" id="parse_btn" value="Parse source"></button>
+      <h4>Result:</h4>
+      <textarea id="out" readonly="true" rows="5" cols="80"/></textarea>
+    </div>
+
+    <script src="dist/main.js"></script>
+  </body>
+</html>

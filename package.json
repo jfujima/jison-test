@@ -1,0 +1,23 @@
+{
+  "name": "jison-test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "browserify src/src.js -o dist/test.js -d",
+    "start": "http-server -o",
+    "watch": "watchify src/main.js -o dist/main.js  -d -v",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ebnf-parser": "^0.1.10",
+    "jison": "^0.4.17"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "http-server": "^0.9.0",
+    "watchify": "^3.7.0"
+  }
+}
